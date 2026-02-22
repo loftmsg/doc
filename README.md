@@ -56,3 +56,12 @@ Loft p2p messenger protocol
 
 ### WS/WSS Binary Protocol
 
+
+## Формат данных в JSON
+- session_id, message_id - UUIDv7 строкового представления 018c644d-3b3b-741a-9694-a28c460d3d5f
+- payload - бинарные данные в кодировке base64 https://ru.wikipedia.org/wiki/Base64
+- md5 hash - бинарные данные base64
+- payload - Canonical JSON
+- seq - unsigned int 0,1, 2 ....
+- singature, signature_prev - бинарные данные в base64 
+
