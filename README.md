@@ -21,9 +21,9 @@ Loft p2p messenger protocol
 ### Public message
 Публичное сообщения состоит из следующих обязательных полей
 - session_id (UUIDv7)
+- md5 hash (seq + payload + sign + sign_prev)
 - seq (int) - sequence id - 0 для первого сообщения в сессии, далее инкремент
 - payload (JSON)
-  - prev_hash - hash предыдущего сообщения (для всех seq > 0)
   - pub_sig - открытый ключ электронной подписи
 - singature - подписаное сообщение
 - signature_prev - сообщение подписаной предыдущей подписью (в случае ее смены)
